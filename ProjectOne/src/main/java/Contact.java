@@ -1,3 +1,4 @@
+
 public class Contact {
   private final String contactId;
   private String firstName; 

@@ -58,7 +58,7 @@ public class ContactService {
     return false;
   }
 
-  // Optional: Get a contact by ID
+  // Get a contact by ID
   public Contact getContact(String contactId) {
     return contacts.get(contactId);
   }
