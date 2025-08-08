@@ -1,11 +1,10 @@
-
 public class Contact {
   private final String contactId;
-  private String firstName; 
+  private String firstName;
   private String lastName;
   private String phoneNumber;
   private String address;
-  
+
   public Contact(String contactId, String firstName, String lastName, String phoneNumber, String address) {
     validateContactId(contactId);
     validateFirstName(firstName);
@@ -66,7 +65,8 @@ public class Contact {
 
   // --- Private validation methods ---
 
-  // The contact object shall have a required unique contact ID string that cannot be longer than 10 characters. 
+  // The contact object shall have a required unique contact ID string that cannot
+  // be longer than 10 characters.
   // The contact ID shall not be null and shall not be updatable.
   private void validateContactId(String contactId) {
     if (contactId == null || contactId.isEmpty()) {
@@ -77,7 +77,8 @@ public class Contact {
     }
   }
 
-  // The contact object shall have a required firstName String field that cannot be longer than 10 characters. 
+  // The contact object shall have a required firstName String field that cannot
+  // be longer than 10 characters.
   // The firstName field shall not be null.
   private void validateFirstName(String firstName) {
     if (firstName == null || firstName.isEmpty()) {
@@ -88,7 +89,8 @@ public class Contact {
     }
   }
 
-  // The contact object shall have a required lastName String field that cannot be longer than 10 characters. 
+  // The contact object shall have a required lastName String field that cannot be
+  // longer than 10 characters.
   // The lastName field shall not be null.
   private void validateLastName(String lastName) {
     if (lastName == null || lastName.isEmpty()) {
@@ -99,7 +101,8 @@ public class Contact {
     }
   }
 
-  // The contact object shall have a required phone String field that must be exactly 10 digits. 
+  // The contact object shall have a required phone String field that must be
+  // exactly 10 digits.
   // The phone field shall not be null.
   private void validatePhoneNumber(String phoneNumber) {
     if (phoneNumber == null || phoneNumber.isEmpty()) {
@@ -110,7 +113,8 @@ public class Contact {
     }
   }
 
-  // The contact object shall have a required address field that must be no longer than 30 characters. 
+  // The contact object shall have a required address field that must be no longer
+  // than 30 characters.
   // The address field shall not be null.
   private void validateAddress(String address) {
     if (address == null || address.isEmpty()) {

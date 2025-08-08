@@ -14,7 +14,7 @@ public class TaskTest {
   @Test
   void testTaskIdNull() {
     Exception ex = assertThrows(IllegalArgumentException.class, () -> {
-        new Task(null, "Name", "Description");
+      new Task(null, "Name", "Description");
     });
     assertTrue(ex.getMessage().contains("Task ID"));
   }
@@ -22,7 +22,7 @@ public class TaskTest {
   @Test
   void testTaskIdTooLong() {
     Exception ex = assertThrows(IllegalArgumentException.class, () -> {
-        new Task("12345678901", "Name", "Description");
+      new Task("12345678901", "Name", "Description");
     });
     assertTrue(ex.getMessage().contains("Task ID"));
   }
@@ -30,7 +30,7 @@ public class TaskTest {
   @Test
   void testNameNull() {
     Exception ex = assertThrows(IllegalArgumentException.class, () -> {
-        new Task("T1", null, "Description");
+      new Task("T1", null, "Description");
     });
     assertTrue(ex.getMessage().contains("Name cannot be null"));
   }
@@ -38,7 +38,7 @@ public class TaskTest {
   @Test
   void testNameEmpty() {
     Exception ex = assertThrows(IllegalArgumentException.class, () -> {
-        new Task("T1", "", "Description");
+      new Task("T1", "", "Description");
     });
     assertTrue(ex.getMessage().contains("Name cannot be null or empty"));
   }
@@ -46,7 +46,7 @@ public class TaskTest {
   @Test
   void testNameTooLong() {
     Exception ex = assertThrows(IllegalArgumentException.class, () -> {
-        new Task("T1", "ThisNameIsWayTooLongForTheLimit", "Description");
+      new Task("T1", "ThisNameIsWayTooLongForTheLimit", "Description");
     });
     assertTrue(ex.getMessage().contains("Name cannot exceed 20 characters"));
   }
@@ -54,7 +54,7 @@ public class TaskTest {
   @Test
   void testDescriptionNull() {
     Exception ex = assertThrows(IllegalArgumentException.class, () -> {
-        new Task("T1", "Name", null);
+      new Task("T1", "Name", null);
     });
     assertTrue(ex.getMessage().contains("Description cannot be null"));
   }
@@ -62,7 +62,7 @@ public class TaskTest {
   @Test
   void testDescriptionEmpty() {
     Exception ex = assertThrows(IllegalArgumentException.class, () -> {
-        new Task("T1", "Name", "");
+      new Task("T1", "Name", "");
     });
     assertTrue(ex.getMessage().contains("Description cannot be null or empty"));
   }
@@ -71,7 +71,7 @@ public class TaskTest {
   void testDescriptionTooLong() {
     String longDesc = "This description is definitely longer than fifty characters, which is not allowed.";
     Exception ex = assertThrows(IllegalArgumentException.class, () -> {
-        new Task("T1", "Name", longDesc);
+      new Task("T1", "Name", longDesc);
     });
     assertTrue(ex.getMessage().contains("Description cannot exceed 50 characters"));
   }
@@ -87,7 +87,7 @@ public class TaskTest {
   void testSetNameInvalid() {
     Task task = new Task("T1", "Name", "Description");
     Exception ex = assertThrows(IllegalArgumentException.class, () -> {
-        task.setName(null);
+      task.setName(null);
     });
     assertTrue(ex.getMessage().contains("Name cannot be null"));
   }
@@ -103,7 +103,7 @@ public class TaskTest {
   void testSetDescriptionInvalid() {
     Task task = new Task("T1", "Name", "Description");
     Exception ex = assertThrows(IllegalArgumentException.class, () -> {
-        task.setDescription("");
+      task.setDescription("");
     });
     assertTrue(ex.getMessage().contains("Description cannot be null or empty"));
   }
